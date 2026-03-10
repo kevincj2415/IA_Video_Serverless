@@ -5,6 +5,7 @@ import base64
 import tempfile
 from io import BytesIO
 from PIL import Image
+import requests
 
 from diffusers import DiffusionPipeline, AutoencoderKLWan
 from diffusers.utils import export_to_video
@@ -54,19 +55,26 @@ def handler(job):
     seed = job_input.get("seed", 0)
 
     if not image_base64:
-        return {"error": "Missing input image (base64 encoded) in the 'image' field"}
-    if "," in image_base64:
-        image_base64 = image_base64.split(",", 1)[1]
-    
-    # Fix incorrect padding issue
-    missing_padding = len(image_base64) % 4
-    if missing_padding:
-        image_base64 += "=" * (4 - missing_padding)
+        return {"error": "Missing input image (base64 encoded or URL) in the 'image' field"}
 
     try:
-        # Decode input image
-        image_data = base64.b64decode(image_base64)
-        input_image = Image.open(BytesIO(image_data)).convert("RGB")
+        # Check if the image provided is a URL
+        if image_base64.startswith("http://") or image_base64.startswith("https://"):
+            response = requests.get(image_base64, timeout=10)
+            response.raise_for_status()
+            input_image = Image.open(BytesIO(response.content)).convert("RGB")
+        else:
+            # Otherwise decode from Base64
+            if "," in image_base64:
+                image_base64 = image_base64.split(",", 1)[1]
+            
+            # Fix incorrect padding issue
+            missing_padding = len(image_base64) % 4
+            if missing_padding:
+                image_base64 += "=" * (4 - missing_padding)
+                
+            image_data = base64.b64decode(image_base64)
+            input_image = Image.open(BytesIO(image_data)).convert("RGB")
         
         # Generator for reproducibility
         generator = torch.Generator(device=device).manual_seed(seed) if seed is not None else None
