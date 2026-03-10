@@ -1,0 +1,133 @@
+2026-03-10T00:34:53.524448344Z ==========
+2026-03-10T00:34:53.524450147Z == CUDA ==
+2026-03-10T00:34:53.524460537Z ==========
+2026-03-10T00:34:53.526861797Z CUDA Version 12.6.3
+2026-03-10T00:34:53.528002745Z Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-03-10T00:34:53.528225240Z This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-03-10T00:34:53.528226853Z By pulling and using the container, you accept the terms and conditions of this license:
+2026-03-10T00:34:53.528228386Z https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-03-10T00:34:53.528231262Z A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-03-10T00:34:59.173343334Z /usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+2026-03-10T00:34:59.173370885Z   warnings.warn(
+2026-03-10T00:34:59.435218899Z _client.py          :1025 2026-03-10 00:34:59,435 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/main/vae/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10T00:34:59.666756252Z _client.py          :1025 2026-03-10 00:34:59,666 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-10T00:34:59.824721384Z _client.py          :1025 2026-03-10 00:34:59,824 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-10T00:34:59.976965472Z _client.py          :1025 2026-03-10 00:34:59,976 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae/diffusion_pytorch_model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-03-10T00:35:00.130719126Z _client.py          :1025 2026-03-10 00:35:00,130 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae/diffusion_pytorch_model.safetensors "HTTP/1.1 302 Found"
+2026-03-10T00:35:00.297850970Z _client.py          :1025 2026-03-10 00:35:00,297 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/xet-read-token/5be7df9619b54f4e2667b2755bc6a756675b5cd7 "HTTP/1.1 200 OK"
+2026-03-10T00:35:02.531863159Z Loading Base Model: Wan-AI/Wan2.2-I2V-A14B
+2026-03-10T00:35:02.729960605Z _client.py          :1025 2026-03-10 00:35:02,729 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B "HTTP/1.1 200 OK"
+2026-03-10T00:35:02.900697534Z _client.py          :1025 2026-03-10 00:35:02,900 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/resolve/main/model_index.json "HTTP/1.1 404 Not Found"
+2026-03-10T00:35:02.901555225Z Traceback (most recent call last):
+2026-03-10T00:35:02.901558591Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 761, in hf_raise_for_status
+2026-03-10T00:35:02.916011585Z     response.raise_for_status()
+2026-03-10T00:35:02.916029729Z   File "/usr/local/lib/python3.12/dist-packages/httpx/_models.py", line 829, in raise_for_status
+2026-03-10T00:35:02.916473607Z     raise HTTPStatusError(message, request=request, response=self)
+2026-03-10T00:35:02.916505176Z httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/resolve/main/model_index.json'
+2026-03-10T00:35:02.916510035Z For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-10T00:35:02.916514554Z The above exception was the direct cause of the following exception:
+2026-03-10T00:35:02.916518421Z Traceback (most recent call last):
+2026-03-10T00:35:02.916531375Z   File "/app/handler.py", line 26, in <module>
+2026-03-10T00:35:02.916561772Z     pipe = DiffusionPipeline.from_pretrained(
+2026-03-10T00:35:02.916588522Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.916594322Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:02.916646119Z     return fn(*args, **kwargs)
+2026-03-10T00:35:02.916689450Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.916696713Z   File "/usr/local/lib/python3.12/dist-packages/diffusers/pipelines/pipeline_utils.py", line 853, in from_pretrained
+2026-03-10T00:35:02.917157273Z     cached_folder = cls.download(
+2026-03-10T00:35:02.917166470Z                     ^^^^^^^^^^^^^
+2026-03-10T00:35:02.917185375Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:02.917214039Z     return fn(*args, **kwargs)
+2026-03-10T00:35:02.917243263Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.917254875Z   File "/usr/local/lib/python3.12/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1636, in download
+2026-03-10T00:35:02.917441673Z     config_file = hf_hub_download(
+2026-03-10T00:35:02.917456651Z                   ^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.917461811Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:02.917499421Z     return fn(*args, **kwargs)
+2026-03-10T00:35:02.917527453Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.917529567Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 986, in hf_hub_download
+2026-03-10T00:35:02.918057903Z     return _hf_hub_download_to_cache_dir(
+2026-03-10T00:35:02.918094271Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.918104189Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1061, in _hf_hub_download_to_cache_dir
+2026-03-10T00:35:02.918285588Z     (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+2026-03-10T00:35:02.918372079Z                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.918384613Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1653, in _get_metadata_or_catch_error
+2026-03-10T00:35:02.918680485Z     metadata = get_hf_file_metadata(
+2026-03-10T00:35:02.918702686Z                ^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.918707094Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:02.918757558Z     return fn(*args, **kwargs)
+2026-03-10T00:35:02.918792273Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.918813302Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1576, in get_hf_file_metadata
+2026-03-10T00:35:02.919012885Z     response = _httpx_follow_relative_redirects_with_backoff(
+2026-03-10T00:35:02.919052378Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:02.919057318Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 692, in _httpx_follow_relative_redirects_with_backoff
+2026-03-10T00:35:02.919156633Z     hf_raise_for_status(response)
+2026-03-10T00:35:02.919167964Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 787, in hf_raise_for_status
+2026-03-10T00:35:02.919269704Z     raise entry_err from e
+2026-03-10T00:35:02.919285984Z huggingface_hub.errors.RemoteEntryNotFoundError: 404 Client Error. (Request ID: Root=1-69af6736-5e717bc94518a69e75646d9e;77ddd295-8c57-46c8-8212-34b13c5563e8)
+2026-03-10T00:35:02.919288870Z Entry Not Found for url: https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/resolve/main/model_index.json.
+2026-03-10T00:35:09.688022835Z ==========
+2026-03-10T00:35:09.688028806Z == CUDA ==
+2026-03-10T00:35:09.688061988Z ==========
+2026-03-10T00:35:09.689324574Z CUDA Version 12.6.3
+2026-03-10T00:35:09.689823394Z Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-03-10T00:35:09.690576840Z This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-03-10T00:35:09.690578393Z By pulling and using the container, you accept the terms and conditions of this license:
+2026-03-10T00:35:09.690580026Z https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-03-10T00:35:09.690583112Z A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-03-10T00:35:14.233756375Z /usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+2026-03-10T00:35:14.233784207Z   warnings.warn(
+2026-03-10T00:35:14.438914483Z _client.py          :1025 2026-03-10 00:35:14,438 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/main/vae/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-10T00:35:14.564842965Z _client.py          :1025 2026-03-10 00:35:14,564 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae%2Fconfig.json "HTTP/1.1 200 OK"
+2026-03-10T00:35:14.721639546Z _client.py          :1025 2026-03-10 00:35:14,721 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae/diffusion_pytorch_model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-03-10T00:35:14.875402979Z Loading Base Model: Wan-AI/Wan2.2-I2V-A14B
+2026-03-10T00:35:15.032447593Z _client.py          :1025 2026-03-10 00:35:15,032 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B "HTTP/1.1 200 OK"
+2026-03-10T00:35:15.192262616Z _client.py          :1025 2026-03-10 00:35:15,192 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/resolve/main/model_index.json "HTTP/1.1 404 Not Found"
+2026-03-10T00:35:15.192626134Z Traceback (most recent call last):
+2026-03-10T00:35:15.192631624Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 761, in hf_raise_for_status
+2026-03-10T00:35:15.192737982Z     response.raise_for_status()
+2026-03-10T00:35:15.192758962Z   File "/usr/local/lib/python3.12/dist-packages/httpx/_models.py", line 829, in raise_for_status
+2026-03-10T00:35:15.192840924Z     raise HTTPStatusError(message, request=request, response=self)
+2026-03-10T00:35:15.192851314Z httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/resolve/main/model_index.json'
+2026-03-10T00:35:15.192855902Z For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-03-10T00:35:15.192859289Z The above exception was the direct cause of the following exception:
+2026-03-10T00:35:15.192862445Z Traceback (most recent call last):
+2026-03-10T00:35:15.192864278Z   File "/app/handler.py", line 26, in <module>
+2026-03-10T00:35:15.192885588Z     pipe = DiffusionPipeline.from_pretrained(
+2026-03-10T00:35:15.192904343Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.192911356Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:15.192945700Z     return fn(*args, **kwargs)
+2026-03-10T00:35:15.192964004Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.192974353Z   File "/usr/local/lib/python3.12/dist-packages/diffusers/pipelines/pipeline_utils.py", line 853, in from_pretrained
+2026-03-10T00:35:15.193098285Z     cached_folder = cls.download(
+2026-03-10T00:35:15.193107241Z                     ^^^^^^^^^^^^^
+2026-03-10T00:35:15.193110928Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:15.193140113Z     return fn(*args, **kwargs)
+2026-03-10T00:35:15.193165760Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.193174807Z   File "/usr/local/lib/python3.12/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1636, in download
+2026-03-10T00:35:15.193327021Z     config_file = hf_hub_download(
+2026-03-10T00:35:15.193340627Z                   ^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.193345215Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:15.193370673Z     return fn(*args, **kwargs)
+2026-03-10T00:35:15.193392644Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.193397884Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 986, in hf_hub_download
+2026-03-10T00:35:15.193503410Z     return _hf_hub_download_to_cache_dir(
+2026-03-10T00:35:15.193525452Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.193527335Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1061, in _hf_hub_download_to_cache_dir
+2026-03-10T00:35:15.193627803Z     (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+2026-03-10T00:35:15.193700739Z                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.193708513Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1653, in _get_metadata_or_catch_error
+2026-03-10T00:35:15.193843725Z     metadata = get_hf_file_metadata(
+2026-03-10T00:35:15.193855768Z                ^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.193857251Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+2026-03-10T00:35:15.193886385Z     return fn(*args, **kwargs)
+2026-03-10T00:35:15.193911432Z            ^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.193913435Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1576, in get_hf_file_metadata
+2026-03-10T00:35:15.194044129Z     response = _httpx_follow_relative_redirects_with_backoff(
+2026-03-10T00:35:15.194071911Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-10T00:35:15.194075297Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 692, in _httpx_follow_relative_redirects_with_backoff
+2026-03-10T00:35:15.194144356Z     hf_raise_for_status(response)
+2026-03-10T00:35:15.194152752Z   File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 787, in hf_raise_for_status
+2026-03-10T00:35:15.194212644Z     raise entry_err from e
+2026-03-10T00:35:15.194224335Z huggingface_hub.errors.RemoteEntryNotFoundError: 404 Client Error. (Request ID: Root=1-69af6743-2cc1bf2b26a7fff63027c0a2;3ec24e66-1950-4993-a1f8-e3b329f3e111)
+2026-03-10T00:35:15.194227361Z Entry Not Found for url: https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/resolve/main/model_index.json.
