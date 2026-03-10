@@ -29,11 +29,8 @@ pipe = DiffusionPipeline.from_pretrained(
     token=hf_token
 )
 
-# Load VAE
-if vae_model.endswith(".safetensors"):
-    pipe.vae = AutoencoderKL.from_single_file(vae_model, torch_dtype=dtype, token=hf_token)
-else:
-    pipe.vae = AutoencoderKL.from_pretrained(vae_model, torch_dtype=dtype, token=hf_token)
+# Load VAE (already loaded up top)
+pipe.vae = vae_model
 
 # Load LoRA
 print(f"Loading LoRA: {lora_model} / {lora_filename}")
