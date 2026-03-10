@@ -15,7 +15,7 @@ hf_token = os.environ.get("HF_TOKEN")
 base_model = os.environ.get("BASE_MODEL", "Wan-AI/Wan2.2-I2V-A14B-Diffusers")
 vae_model = AutoencoderKLWan.from_pretrained("Wan-AI/Wan2.2-T2V-A14B-Diffusers", subfolder="vae", torch_dtype=torch.float32)
 lora_model = os.environ.get("LORA_MODEL", "wangkanai/wan22-fp8-i2v-loras-nsfw")
-lora_filename = os.environ.get("LORA_FILENAME", "wan22-action-missionary-pov-i2v-low.safetensors")
+lora_filename = os.environ.get("LORA_FILENAME", "loras/wan/wan22-action-missionary-pov-i2v-low.safetensors")
 
 print(f"Loading Base Model: {base_model}")
 
