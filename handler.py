@@ -34,7 +34,7 @@ pipe.vae = vae_model
 
 # Load LoRA
 print(f"Loading LoRA: {lora_model} / {lora_filename}")
-pipe.load_lora_weights(lora_model, weight_name=lora_filename, token=hf_token)
+pipe.load_lora_weights(lora_model, weight_name=lora_filename, adapter_name="action_lora", token=hf_token)
 
 # Memory optimization for lower VRAM
 pipe.enable_model_cpu_offload()

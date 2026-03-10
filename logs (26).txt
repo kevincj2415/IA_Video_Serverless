@@ -1,190 +1,0 @@
-2026-03-10T04:59:40.669651203Z ==========
-2026-03-10T04:59:40.669655563Z == CUDA ==
-2026-03-10T04:59:40.669660593Z ==========
-2026-03-10T04:59:40.673130130Z CUDA Version 12.6.3
-2026-03-10T04:59:40.674588872Z Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-2026-03-10T04:59:40.675799132Z This container image and its contents are governed by the NVIDIA Deep Learning Container License.
-2026-03-10T04:59:40.675803252Z By pulling and using the container, you accept the terms and conditions of this license:
-2026-03-10T04:59:40.675806752Z https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
-2026-03-10T04:59:40.675813172Z A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
-2026-03-10T04:59:46.412553758Z /opt/conda/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-2026-03-10T04:59:46.412603968Z   warnings.warn(
-2026-03-10T04:59:46.535299528Z _client.py          :1025 2026-03-10 04:59:46,534 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/main/vae/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:46.536002084Z Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-2026-03-10T04:59:46.536018324Z _http.py            :916  2026-03-10 04:59:46,535 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-2026-03-10T04:59:46.547958379Z _client.py          :1025 2026-03-10 04:59:46,547 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:46.564444459Z _client.py          :1025 2026-03-10 04:59:46,564 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:46.588201687Z _client.py          :1025 2026-03-10 04:59:46,588 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae/diffusion_pytorch_model.safetensors.index.json "HTTP/1.1 404 Not Found"
-2026-03-10T04:59:46.614212123Z _client.py          :1025 2026-03-10 04:59:46,614 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae/diffusion_pytorch_model.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:46.641053215Z _client.py          :1025 2026-03-10 04:59:46,640 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/xet-read-token/5be7df9619b54f4e2667b2755bc6a756675b5cd7 "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.310853616Z Loading Base Model: Wan-AI/Wan2.2-I2V-A14B-Diffusers
-2026-03-10T04:59:55.360994012Z _client.py          :1025 2026-03-10 04:59:55,360 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.384488618Z _client.py          :1025 2026-03-10 04:59:55,384 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/main/model_index.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:55.395059672Z _client.py          :1025 2026-03-10 04:59:55,394 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/model_index.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.406993536Z _client.py          :1025 2026-03-10 04:59:55,406 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/model_index.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.472776087Z _client.py          :1025 2026-03-10 04:59:55,472 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/revision/main "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.500687017Z Fetching 41 files:   0%|          | 0/41 [00:00<?, ?it/s]_client.py          :1025 2026-03-10 04:59:55,500 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/scheduler/scheduler_config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:55.512081678Z _client.py          :1025 2026-03-10 04:59:55,511 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/scheduler%2Fscheduler_config.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.525318122Z _client.py          :1025 2026-03-10 04:59:55,525 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:55.527204827Z _client.py          :1025 2026-03-10 04:59:55,527 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/scheduler%2Fscheduler_config.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.532087396Z _client.py          :1025 2026-03-10 04:59:55,531 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:55.533501557Z _client.py          :1025 2026-03-10 04:59:55,533 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder/model-00001-of-00003.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.535051820Z _client.py          :1025 2026-03-10 04:59:55,534 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder/model-00003-of-00003.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.536955444Z _client.py          :1025 2026-03-10 04:59:55,536 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.538221254Z _client.py          :1025 2026-03-10 04:59:55,537 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder/model-00002-of-00003.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.539857878Z _client.py          :1025 2026-03-10 04:59:55,538 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:55.543798209Z _client.py          :1025 2026-03-10 04:59:55,543 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer%2Fspecial_tokens_map.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.547180625Z _client.py          :1025 2026-03-10 04:59:55,546 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer/spiece.model "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.553828478Z _client.py          :1025 2026-03-10 04:59:55,553 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder%2Fmodel.safetensors.index.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.555400581Z _client.py          :1025 2026-03-10 04:59:55,555 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer/tokenizer.json "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.561140436Z _client.py          :1025 2026-03-10 04:59:55,560 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.564272131Z _client.py          :1025 2026-03-10 04:59:55,564 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/xet-read-token/596658fd9ca6b7b71d5057529bbf319ecbc61d74 "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.565056657Z _client.py          :1025 2026-03-10 04:59:55,564 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer%2Fspecial_tokens_map.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.569373131Z _client.py          :1025 2026-03-10 04:59:55,569 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/xet-read-token/596658fd9ca6b7b71d5057529bbf319ecbc61d74 "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.570740852Z _client.py          :1025 2026-03-10 04:59:55,570 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/text_encoder%2Fmodel.safetensors.index.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.571818240Z _client.py          :1025 2026-03-10 04:59:55,571 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/xet-read-token/596658fd9ca6b7b71d5057529bbf319ecbc61d74 "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.576947141Z _client.py          :1025 2026-03-10 04:59:55,576 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/xet-read-token/596658fd9ca6b7b71d5057529bbf319ecbc61d74 "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.580461629Z _client.py          :1025 2026-03-10 04:59:55,580 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/xet-read-token/596658fd9ca6b7b71d5057529bbf319ecbc61d74 "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.583494713Z _client.py          :1025 2026-03-10 04:59:55,583 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:55.584879994Z _client.py          :1025 2026-03-10 04:59:55,584 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T04:59:55.594414199Z _client.py          :1025 2026-03-10 04:59:55,594 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer%2Ftokenizer_config.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.596070082Z _client.py          :1025 2026-03-10 04:59:55,595 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.597166861Z _client.py          :1025 2026-03-10 04:59:55,597 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00001-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.606755517Z _client.py          :1025 2026-03-10 04:59:55,606 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/tokenizer%2Ftokenizer_config.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.609071085Z _client.py          :1025 2026-03-10 04:59:55,608 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T04:59:55.630861147Z _client.py          :1025 2026-03-10 04:59:55,630 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00002-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.633288727Z _client.py          :1025 2026-03-10 04:59:55,633 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00003-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:55.806331666Z _client.py          :1025 2026-03-10 04:59:55,806 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00004-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T04:59:56.004695205Z _client.py          :1025 2026-03-10 04:59:56,004 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00005-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:19.306020972Z _client.py          :1025 2026-03-10 05:00:19,305 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00006-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:38.891225416Z _client.py          :1025 2026-03-10 05:00:38,890 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00007-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:39.789452212Z Fetching 41 files:  10%|▉         | 4/41 [00:44<06:49, 11.07s/it]_client.py          :1025 2026-03-10 05:00:39,789 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00008-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:39.827153870Z _client.py          :1025 2026-03-10 05:00:39,826 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00009-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:39.874668096Z _client.py          :1025 2026-03-10 05:00:39,874 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00010-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:40.460347250Z Fetching 41 files:  34%|███▍      | 14/41 [00:44<01:06,  2.47s/it]_client.py          :1025 2026-03-10 05:00:40,460 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00011-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:40.842170670Z Fetching 41 files:  39%|███▉      | 16/41 [00:45<00:51,  2.06s/it]_client.py          :1025 2026-03-10 05:00:40,841 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model-00012-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:41.027555077Z Fetching 41 files:  41%|████▏     | 17/41 [00:45<00:44,  1.84s/it]_client.py          :1025 2026-03-10 05:00:41,027 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer/diffusion_pytorch_model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T05:00:41.039574262Z _client.py          :1025 2026-03-10 05:00:41,039 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer%2Fdiffusion_pytorch_model.safetensors.index.json "HTTP/1.1 200 OK"
-2026-03-10T05:00:41.052135412Z _client.py          :1025 2026-03-10 05:00:41,052 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer%2Fdiffusion_pytorch_model.safetensors.index.json "HTTP/1.1 200 OK"
-2026-03-10T05:00:41.074282977Z _client.py          :1025 2026-03-10 05:00:41,074 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T05:00:41.084889681Z _client.py          :1025 2026-03-10 05:00:41,084 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T05:00:41.109449055Z _client.py          :1025 2026-03-10 05:00:41,109 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00001-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:47.962277231Z Fetching 41 files:  44%|████▍     | 18/41 [00:52<00:58,  2.56s/it]_client.py          :1025 2026-03-10 05:00:47,961 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00002-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:00:54.701624159Z _client.py          :1025 2026-03-10 05:00:54,701 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00003-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:00.367130801Z Fetching 41 files:  46%|████▋     | 19/41 [01:04<01:32,  4.21s/it]_client.py          :1025 2026-03-10 05:01:00,366 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00004-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:00.462186983Z _client.py          :1025 2026-03-10 05:01:00,461 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00005-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:00.815984432Z Fetching 41 files:  49%|████▉     | 20/41 [01:05<01:13,  3.49s/it]_client.py          :1025 2026-03-10 05:01:00,815 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00006-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:00.910661341Z _client.py          :1025 2026-03-10 05:01:00,910 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00007-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:01.493120729Z Fetching 41 files:  56%|█████▌    | 23/41 [01:05<00:36,  2.01s/it]_client.py          :1025 2026-03-10 05:01:01,492 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00008-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:01.747264070Z Fetching 41 files:  66%|██████▌   | 27/41 [01:06<00:15,  1.11s/it]_client.py          :1025 2026-03-10 05:01:01,747 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00009-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:07.625846698Z Fetching 41 files:  68%|██████▊   | 28/41 [01:12<00:23,  1.78s/it]_client.py          :1025 2026-03-10 05:01:07,625 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00010-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:13.164916950Z Fetching 41 files:  71%|███████   | 29/41 [01:17<00:28,  2.41s/it]_client.py          :1025 2026-03-10 05:01:13,164 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00011-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:19.228560212Z Fetching 41 files:  73%|███████▎  | 30/41 [01:23<00:34,  3.12s/it]_client.py          :1025 2026-03-10 05:01:19,228 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model-00012-of-00012.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:19.268759500Z _client.py          :1025 2026-03-10 05:01:19,268 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/vae/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T05:01:19.280421822Z _client.py          :1025 2026-03-10 05:01:19,280 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/vae%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T05:01:19.293155153Z _client.py          :1025 2026-03-10 05:01:19,292 HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/vae%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T05:01:19.326127344Z _client.py          :1025 2026-03-10 05:01:19,325 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/vae/diffusion_pytorch_model.safetensors "HTTP/1.1 302 Found"
-2026-03-10T05:01:23.222526070Z Fetching 41 files:  80%|████████  | 33/41 [01:24<00:14,  1.79s/it]Fetching 41 files:  83%|████████▎ | 34/41 [01:24<00:10,  1.54s/it]Fetching 41 files:  85%|████████▌ | 35/41 [01:24<00:07,  1.28s/it]_client.py          :1025 2026-03-10 05:01:23,222 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2/diffusion_pytorch_model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T05:01:23.244644625Z _client.py          :1025 2026-03-10 05:01:23,244 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/transformer_2%2Fdiffusion_pytorch_model.safetensors.index.json "HTTP/1.1 200 OK"
-2026-03-10T05:01:25.173003211Z Fetching 41 files:  88%|████████▊ | 36/41 [01:27<00:08,  1.64s/it]Fetching 41 files:  90%|█████████ | 37/41 [01:29<00:06,  1.71s/it]Fetching 41 files: 100%|██████████| 41/41 [01:29<00:00,  2.19s/it]
-2026-03-10T05:01:25.667344882Z Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
-2026-03-10T05:01:27.230206306Z Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s][A
-2026-03-10T05:01:28.876411360Z Loading checkpoint shards:   8%|▊         | 1/12 [00:01<00:17,  1.56s/it][A
-2026-03-10T05:01:30.548590369Z Loading checkpoint shards:  17%|█▋        | 2/12 [00:03<00:16,  1.61s/it][A
-2026-03-10T05:01:31.816884883Z Loading checkpoint shards:  25%|██▌       | 3/12 [00:04<00:14,  1.64s/it][A
-2026-03-10T05:01:32.444532189Z Loading checkpoint shards:  33%|███▎      | 4/12 [00:06<00:11,  1.49s/it][A
-2026-03-10T05:01:33.047168866Z Loading checkpoint shards:  42%|████▏     | 5/12 [00:06<00:08,  1.18s/it][A
-2026-03-10T05:01:33.637436426Z Loading checkpoint shards:  50%|█████     | 6/12 [00:07<00:05,  1.02it/s][A
-2026-03-10T05:01:34.247328752Z Loading checkpoint shards:  58%|█████▊    | 7/12 [00:07<00:04,  1.17it/s][A
-2026-03-10T05:01:36.521704305Z Loading checkpoint shards:  67%|██████▋   | 8/12 [00:08<00:03,  1.29it/s][A
-2026-03-10T05:01:37.584836766Z Loading checkpoint shards:  75%|███████▌  | 9/12 [00:10<00:03,  1.25s/it][A
-2026-03-10T05:01:38.783046145Z Loading checkpoint shards:  83%|████████▎ | 10/12 [00:11<00:02,  1.19s/it][A
-2026-03-10T05:01:39.525913583Z Loading checkpoint shards:  92%|█████████▏| 11/12 [00:13<00:01,  1.19s/it][A
-2026-03-10T05:01:39.527428215Z Loading checkpoint shards: 100%|██████████| 12/12 [00:13<00:00,  1.06s/it][ALoading checkpoint shards: 100%|██████████| 12/12 [00:13<00:00,  1.15s/it]
-2026-03-10T05:01:39.672134409Z Loading pipeline components...:  17%|█▋        | 1/6 [00:14<01:11, 14.36s/it]
-2026-03-10T05:01:40.685852890Z Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s][A
-2026-03-10T05:01:41.825779438Z Loading checkpoint shards:   8%|▊         | 1/12 [00:01<00:11,  1.01s/it][A
-2026-03-10T05:01:43.370265727Z Loading checkpoint shards:  17%|█▋        | 2/12 [00:02<00:10,  1.09s/it][A
-2026-03-10T05:01:44.449894209Z Loading checkpoint shards:  25%|██▌       | 3/12 [00:03<00:11,  1.30s/it][A
-2026-03-10T05:01:45.546109321Z Loading checkpoint shards:  33%|███▎      | 4/12 [00:04<00:09,  1.21s/it][A
-2026-03-10T05:01:46.969433282Z Loading checkpoint shards:  42%|████▏     | 5/12 [00:05<00:08,  1.17s/it][A
-2026-03-10T05:01:47.967649299Z Loading checkpoint shards:  50%|█████     | 6/12 [00:07<00:07,  1.26s/it][A
-2026-03-10T05:01:49.116630319Z Loading checkpoint shards:  58%|█████▊    | 7/12 [00:08<00:05,  1.17s/it][A
-2026-03-10T05:01:50.199990700Z Loading checkpoint shards:  67%|██████▋   | 8/12 [00:09<00:04,  1.16s/it][A
-2026-03-10T05:01:51.300655548Z Loading checkpoint shards:  75%|███████▌  | 9/12 [00:10<00:03,  1.14s/it][A
-2026-03-10T05:01:52.295207956Z Loading checkpoint shards:  83%|████████▎ | 10/12 [00:11<00:02,  1.13s/it][A
-2026-03-10T05:01:52.942472977Z Loading checkpoint shards:  92%|█████████▏| 11/12 [00:12<00:01,  1.09s/it][A
-2026-03-10T05:01:52.945789853Z Loading checkpoint shards: 100%|██████████| 12/12 [00:13<00:00,  1.05it/s][ALoading checkpoint shards: 100%|██████████| 12/12 [00:13<00:00,  1.11s/it]
-2026-03-10T05:01:55.119804943Z Loading pipeline components...:  33%|███▎      | 2/6 [00:27<00:55, 13.80s/it]Loading pipeline components...:  50%|█████     | 3/6 [00:28<00:22,  7.65s/it]Loading pipeline components...:  67%|██████▋   | 4/6 [00:29<00:10,  5.32s/it]
-2026-03-10T05:01:55.225154766Z Loading weights:   0%|          | 0/242 [00:00<?, ?it/s][A
-2026-03-10T05:01:55.303351705Z Loading weights:  53%|█████▎    | 128/242 [00:00<00:00, 1216.65it/s][ALoading weights: 100%|██████████| 242/242 [00:00<00:00, 1320.37it/s]
-2026-03-10T05:01:55.318599935Z Loading pipeline components...: 100%|██████████| 6/6 [00:30<00:00,  2.58s/it]Loading pipeline components...: 100%|██████████| 6/6 [00:30<00:00,  5.02s/it]
-2026-03-10T05:01:55.319980866Z Traceback (most recent call last):
-2026-03-10T05:01:55.320019556Z   File "/app/handler.py", line 33, in <module>
-2026-03-10T05:01:55.320432720Z     if vae_model.endswith(".safetensors"):
-2026-03-10T05:01:55.320478520Z        ^^^^^^^^^^^^^^^^^^
-2026-03-10T05:01:55.320486370Z   File "/opt/conda/lib/python3.11/site-packages/diffusers/models/modeling_utils.py", line 274, in __getattr__
-2026-03-10T05:01:55.320947544Z     return super().__getattr__(name)
-2026-03-10T05:01:55.320976954Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
-2026-03-10T05:01:55.321013684Z   File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1928, in __getattr__
-2026-03-10T05:01:55.321968022Z     raise AttributeError(
-2026-03-10T05:01:55.322428966Z AttributeError: 'AutoencoderKLWan' object has no attribute 'endswith'
-2026-03-10T05:02:14.662895166Z ==========
-2026-03-10T05:02:14.662899006Z == CUDA ==
-2026-03-10T05:02:14.662915886Z ==========
-2026-03-10T05:02:14.670164844Z CUDA Version 12.6.3
-2026-03-10T05:02:14.671462594Z Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-2026-03-10T05:02:14.673051746Z This container image and its contents are governed by the NVIDIA Deep Learning Container License.
-2026-03-10T05:02:14.673055557Z By pulling and using the container, you accept the terms and conditions of this license:
-2026-03-10T05:02:14.673073747Z https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
-2026-03-10T05:02:14.673079227Z A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
-2026-03-10T05:02:21.085401408Z /opt/conda/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-2026-03-10T05:02:21.085447128Z   warnings.warn(
-2026-03-10T05:02:21.142416379Z _client.py          :1025 2026-03-10 05:02:21,142 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/main/vae/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T05:02:21.153117813Z _client.py          :1025 2026-03-10 05:02:21,153 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-T2V-A14B-Diffusers/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae%2Fconfig.json "HTTP/1.1 200 OK"
-2026-03-10T05:02:21.174669784Z _client.py          :1025 2026-03-10 05:02:21,174 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B-Diffusers/resolve/5be7df9619b54f4e2667b2755bc6a756675b5cd7/vae/diffusion_pytorch_model.safetensors.index.json "HTTP/1.1 404 Not Found"
-2026-03-10T05:02:21.234230775Z Loading Base Model: Wan-AI/Wan2.2-I2V-A14B-Diffusers
-2026-03-10T05:02:21.260978587Z _client.py          :1025 2026-03-10 05:02:21,260 HTTP Request: GET https://huggingface.co/api/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers "HTTP/1.1 200 OK"
-2026-03-10T05:02:21.284787685Z _client.py          :1025 2026-03-10 05:02:21,284 HTTP Request: HEAD https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers/resolve/main/model_index.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-10T05:02:21.296603028Z _client.py          :1025 2026-03-10 05:02:21,296 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B-Diffusers/596658fd9ca6b7b71d5057529bbf319ecbc61d74/model_index.json "HTTP/1.1 200 OK"
-2026-03-10T05:02:21.626123015Z Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
-2026-03-10T05:02:22.160313192Z Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s][A
-2026-03-10T05:02:22.758708776Z Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:05,  1.87it/s][A
-2026-03-10T05:02:23.423132442Z Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:05,  1.75it/s][A
-2026-03-10T05:02:24.037185890Z Loading checkpoint shards:  25%|██▌       | 3/12 [00:01<00:05,  1.63it/s][A
-2026-03-10T05:02:24.682970299Z Loading checkpoint shards:  33%|███▎      | 4/12 [00:02<00:04,  1.63it/s][A
-2026-03-10T05:02:25.286668946Z Loading checkpoint shards:  42%|████▏     | 5/12 [00:03<00:04,  1.60it/s][A
-2026-03-10T05:02:25.869597667Z Loading checkpoint shards:  50%|█████     | 6/12 [00:03<00:03,  1.62it/s][A
-2026-03-10T05:02:26.451153788Z Loading checkpoint shards:  58%|█████▊    | 7/12 [00:04<00:03,  1.65it/s][A
-2026-03-10T05:02:28.375712464Z Loading checkpoint shards:  67%|██████▋   | 8/12 [00:04<00:02,  1.67it/s][A
-2026-03-10T05:02:29.410747503Z Loading checkpoint shards:  75%|███████▌  | 9/12 [00:06<00:03,  1.01s/it][A
-2026-03-10T05:02:30.493963223Z Loading checkpoint shards:  83%|████████▎ | 10/12 [00:07<00:02,  1.02s/it][A
-2026-03-10T05:02:30.849903669Z Loading checkpoint shards:  92%|█████████▏| 11/12 [00:08<00:01,  1.04s/it][A
-2026-03-10T05:02:30.850096120Z Loading checkpoint shards: 100%|██████████| 12/12 [00:09<00:00,  1.20it/s][ALoading checkpoint shards: 100%|██████████| 12/12 [00:09<00:00,  1.30it/s]
-2026-03-10T05:02:30.922361552Z Loading pipeline components...:  33%|███▎      | 2/6 [00:09<00:18,  4.74s/it]
-2026-03-10T05:02:30.959693047Z Loading weights:   0%|          | 0/242 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 242/242 [00:00<00:00, 6503.76it/s]
-2026-03-10T05:02:32.583207441Z Loading pipeline components...:  50%|█████     | 3/6 [00:09<00:08,  2.81s/it]Loading pipeline components...:  67%|██████▋   | 4/6 [00:11<00:04,  2.30s/it]
-2026-03-10T05:02:33.579976547Z Loading checkpoint shards:   0%|          | 0/12 [00:00<?, ?it/s][A
-2026-03-10T05:02:34.578860500Z Loading checkpoint shards:   8%|▊         | 1/12 [00:00<00:10,  1.00it/s][A
-2026-03-10T05:02:36.045179700Z Loading checkpoint shards:  17%|█▋        | 2/12 [00:01<00:09,  1.00it/s][A
-2026-03-10T05:02:37.109446780Z Loading checkpoint shards:  25%|██▌       | 3/12 [00:03<00:10,  1.21s/it][A
-2026-03-10T05:02:38.114735583Z Loading checkpoint shards:  33%|███▎      | 4/12 [00:04<00:09,  1.15s/it][A
-2026-03-10T05:02:39.218248753Z Loading checkpoint shards:  42%|████▏     | 5/12 [00:05<00:07,  1.10s/it][A
-2026-03-10T05:02:40.391250393Z Loading checkpoint shards:  50%|█████     | 6/12 [00:06<00:06,  1.10s/it][A
-2026-03-10T05:02:41.451466111Z Loading checkpoint shards:  58%|█████▊    | 7/12 [00:07<00:05,  1.12s/it][A
-2026-03-10T05:02:42.554949781Z Loading checkpoint shards:  67%|██████▋   | 8/12 [00:08<00:04,  1.10s/it][A
-2026-03-10T05:02:43.597601050Z Loading checkpoint shards:  75%|███████▌  | 9/12 [00:09<00:03,  1.10s/it][A
-2026-03-10T05:02:44.724642946Z Loading checkpoint shards:  83%|████████▎ | 10/12 [00:11<00:02,  1.09s/it][A
-2026-03-10T05:02:45.444809433Z Loading checkpoint shards:  92%|█████████▏| 11/12 [00:12<00:01,  1.10s/it][A
-2026-03-10T05:02:45.445113396Z Loading checkpoint shards: 100%|██████████| 12/12 [00:12<00:00,  1.02it/s][ALoading checkpoint shards: 100%|██████████| 12/12 [00:12<00:00,  1.07s/it]
-2026-03-10T05:02:45.449267799Z Loading pipeline components...: 100%|██████████| 6/6 [00:24<00:00,  4.48s/it]Loading pipeline components...: 100%|██████████| 6/6 [00:24<00:00,  4.01s/it]
-2026-03-10T05:02:45.449866573Z Traceback (most recent call last):
-2026-03-10T05:02:45.449873564Z   File "/app/handler.py", line 33, in <module>
-2026-03-10T05:02:45.450059985Z     if vae_model.endswith(".safetensors"):
-2026-03-10T05:02:45.450195506Z        ^^^^^^^^^^^^^^^^^^
-2026-03-10T05:02:45.450224936Z   File "/opt/conda/lib/python3.11/site-packages/diffusers/models/modeling_utils.py", line 274, in __getattr__
-2026-03-10T05:02:45.450292387Z     return super().__getattr__(name)
-2026-03-10T05:02:45.450315317Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
-2026-03-10T05:02:45.450335487Z   File "/opt/conda/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1928, in __getattr__
-2026-03-10T05:02:45.450584559Z     raise AttributeError(
-2026-03-10T05:02:45.450716150Z AttributeError: 'AutoencoderKLWan' object has no attribute 'endswith'
