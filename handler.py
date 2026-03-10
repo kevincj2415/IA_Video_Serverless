@@ -55,6 +55,13 @@ def handler(job):
 
     if not image_base64:
         return {"error": "Missing input image (base64 encoded) in the 'image' field"}
+    if "," in image_base64:
+        image_base64 = image_base64.split(",", 1)[1]
+    
+    # Fix incorrect padding issue
+    missing_padding = len(image_base64) % 4
+    if missing_padding:
+        image_base64 += "=" * (4 - missing_padding)
 
     try:
         # Decode input image
