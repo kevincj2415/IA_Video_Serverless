@@ -12,6 +12,7 @@ from diffusers import DiffusionPipeline, AutoencoderKLWan
 from diffusers.utils import export_to_video
 
 hf_token = os.environ.get("HF_TOKEN")
+hf_token = hf_token.strip() if hf_token else None
 
 # Model paths or HF repo IDs (Allow overrides for network volumes in RunPod)
 base_model = os.environ.get("BASE_MODEL", "Wan-AI/Wan2.2-I2V-A14B-Diffusers")

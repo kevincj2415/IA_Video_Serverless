@@ -3,6 +3,7 @@ from huggingface_hub import snapshot_download, hf_hub_download
 
 def download():
     hf_token = os.environ.get("HF_TOKEN")
+    hf_token = hf_token.strip() if hf_token else None
     
     base_model = os.environ.get("BASE_MODEL", "Wan-AI/Wan2.2-I2V-A14B-Diffusers")
     vae_model = os.environ.get("VAE_MODEL", "Wan-AI/Wan2.2-T2V-A14B-Diffusers")
