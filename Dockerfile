@@ -9,6 +9,11 @@ RUN apt-get update && apt-get install -y git ffmpeg libsm6 libxext6 && rm -rf /v
 # Se usan las mismas que la documentación
 RUN pip install git+https://github.com/huggingface/diffusers.git transformers accelerate safetensors sentencepiece protobuf peft runpod imageio[ffmpeg] ftfy regex --upgrade --break-system-packages
 
+COPY download_models.py .
+ARG HF_TOKEN
+ENV HF_HOME=/model_cache
+RUN HF_TOKEN=${HF_TOKEN} python download_models.py
+
 COPY handler.py .
 
 CMD [ "python", "-u", "handler.py" ]

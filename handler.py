@@ -1,4 +1,5 @@
 import os
+os.environ["HF_HUB_OFFLINE"] = "1"
 import runpod
 import torch
 import base64
